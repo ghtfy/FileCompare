@@ -44,6 +44,12 @@
             this.txtRightDir = new System.Windows.Forms.TextBox();
             this.lvwLeftDir = new System.Windows.Forms.ListView();
             this.lvwRightDir = new System.Windows.Forms.ListView();
+            this.name_left = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.size_left = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.수정일 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.name_right = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.size_right = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -215,23 +221,67 @@
             // 
             this.lvwLeftDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwLeftDir.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.name_left,
+            this.size_left,
+            this.수정일});
+            this.lvwLeftDir.FullRowSelect = true;
+            this.lvwLeftDir.GridLines = true;
             this.lvwLeftDir.HideSelection = false;
             this.lvwLeftDir.Location = new System.Drawing.Point(8, 18);
             this.lvwLeftDir.Name = "lvwLeftDir";
             this.lvwLeftDir.Size = new System.Drawing.Size(475, 365);
             this.lvwLeftDir.TabIndex = 0;
             this.lvwLeftDir.UseCompatibleStateImageBehavior = false;
+            this.lvwLeftDir.View = System.Windows.Forms.View.Details;
             // 
             // lvwRightDir
             // 
             this.lvwRightDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.lvwRightDir.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.name_right,
+            this.size_right,
+            this.columnHeader1});
+            this.lvwRightDir.FullRowSelect = true;
+            this.lvwRightDir.GridLines = true;
             this.lvwRightDir.HideSelection = false;
             this.lvwRightDir.Location = new System.Drawing.Point(39, 18);
             this.lvwRightDir.Name = "lvwRightDir";
             this.lvwRightDir.Size = new System.Drawing.Size(475, 365);
             this.lvwRightDir.TabIndex = 1;
             this.lvwRightDir.UseCompatibleStateImageBehavior = false;
+            this.lvwRightDir.View = System.Windows.Forms.View.Details;
+            // 
+            // name_left
+            // 
+            this.name_left.Text = "이름";
+            this.name_left.Width = 300;
+            // 
+            // size_left
+            // 
+            this.size_left.Text = "크기";
+            this.size_left.Width = 100;
+            // 
+            // 수정일
+            // 
+            this.수정일.Text = "수정일";
+            this.수정일.Width = 160;
+            // 
+            // name_right
+            // 
+            this.name_right.Text = "이름";
+            this.name_right.Width = 300;
+            // 
+            // size_right
+            // 
+            this.size_right.Text = "크기";
+            this.size_right.Width = 100;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "수정일";
+            this.columnHeader1.Width = 160;
             // 
             // Form1
             // 
@@ -276,6 +326,12 @@
         private System.Windows.Forms.Button btnCopyFromRight;
         private System.Windows.Forms.ListView lvwLeftDir;
         private System.Windows.Forms.ListView lvwRightDir;
+        private System.Windows.Forms.ColumnHeader name_left;
+        private System.Windows.Forms.ColumnHeader size_left;
+        private System.Windows.Forms.ColumnHeader 수정일;
+        private System.Windows.Forms.ColumnHeader name_right;
+        private System.Windows.Forms.ColumnHeader size_right;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 
