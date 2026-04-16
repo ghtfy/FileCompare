@@ -27,6 +27,8 @@ namespace FileCompare
         public Form1()
         {
             InitializeComponent();
+            btnCopyFromLeft.Click += btnCopyFromLeft_Click;
+            btnCopyFromRight.Click += btnCopyFromRight_Click;
         }
 
         private void btnLeftDir_Click(object sender, EventArgs e)
@@ -64,6 +66,84 @@ namespace FileCompare
                     txtRightDir.Text = dlg.SelectedPath;
                     PopulateListViews();
                 }
+            }
+        }
+
+        private void btnCopyFromLeft_Click(object sender, EventArgs e)
+        {
+            CopySelectedFile(lvwLeftDir, txtLeftDir.Text, txtRightDir.Text);
+        }
+
+        private void btnCopyFromRight_Click(object sender, EventArgs e)
+        {
+            CopySelectedFile(lvwRightDir, txtRightDir.Text, txtLeftDir.Text);
+        }
+
+        private void CopySelectedFile(ListView sourceListView, string sourceFolder, string destinationFolder)
+        {
+            if (string.IsNullOrWhiteSpace(sourceFolder) || !Directory.Exists(sourceFolder))
+            {
+                MessageBox.Show("원본 폴더를 먼저 선택하세요.", "안내", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(destinationFolder) || !Directory.Exists(destinationFolder))
+            {
+                MessageBox.Show("대상 폴더를 먼저 선택하세요.", "안내", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (sourceListView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("복사할 파일을 선택하세요.", "안내", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var fileName = sourceListView.SelectedItems[0].Text;
+            var sourcePath = Path.Combine(sourceFolder, fileName);
+            var destinationPath = Path.Combine(destinationFolder, fileName);
+
+            try
+            {
+                if (!File.Exists(sourcePath))
+                {
+                    MessageBox.Show("원본 파일을 찾을 수 없습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (File.Exists(destinationPath))
+                {
+                    var sourceInfo = new FileInfo(sourcePath);
+                    var destinationInfo = new FileInfo(destinationPath);
+
+                    var message = string.Format(
+                        "대상에 동일한 이름의 파일이 이미 있습니다.\r\n대상 파일이 덮어쓰기 됩니다. 계속하시겠습니까?\r\n\r\n원본: {0}\r\n대상: {1}",
+                        sourcePath,
+                        destinationPath);
+
+                    if (sourceInfo.LastWriteTime != destinationInfo.LastWriteTime)
+                    {
+                        message = string.Format(
+                            "대상에 동일한 이름의 파일이 이미 있습니다.\r\n수정된 날짜가 다릅니다. 덮어쓰기 하시겠습니까?\r\n\r\n원본: {0}\r\n대상: {1}",
+                            sourcePath,
+                            destinationPath);
+                    }
+
+                    var result = MessageBox.Show(message, "확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result != DialogResult.Yes)
+                    {
+                        return;
+                    }
+                }
+
+                File.Copy(sourcePath, destinationPath, true);
+                var copiedInfo = new FileInfo(sourcePath);
+                File.SetLastWriteTime(destinationPath, copiedInfo.LastWriteTime);
+                PopulateListViews();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
