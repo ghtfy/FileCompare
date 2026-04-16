@@ -81,8 +81,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel5);
             this.splitContainer1.Panel2.Controls.Add(this.panel4);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.splitContainer1.Size = new System.Drawing.Size(1091, 569);
-            this.splitContainer1.SplitterDistance = 536;
+            this.splitContainer1.Size = new System.Drawing.Size(1199, 569);
+            this.splitContainer1.SplitterDistance = 589;
             this.splitContainer1.TabIndex = 0;
             // 
             // panel1
@@ -92,7 +92,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(526, 100);
+            this.panel1.Size = new System.Drawing.Size(579, 100);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -103,7 +103,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(5, 105);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(526, 69);
+            this.panel2.Size = new System.Drawing.Size(579, 69);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -113,7 +113,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(5, 174);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(526, 390);
+            this.panel3.Size = new System.Drawing.Size(579, 390);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -123,7 +123,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(5, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(541, 100);
+            this.panel4.Size = new System.Drawing.Size(596, 100);
             this.panel4.TabIndex = 0;
             // 
             // panel5
@@ -134,7 +134,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(5, 105);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(541, 69);
+            this.panel5.Size = new System.Drawing.Size(596, 69);
             this.panel5.TabIndex = 1;
             // 
             // panel6
@@ -144,7 +144,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(5, 174);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(541, 390);
+            this.panel6.Size = new System.Drawing.Size(596, 390);
             this.panel6.TabIndex = 2;
             // 
             // lblAppName
@@ -162,7 +162,7 @@
             // 
             this.btnCopyFromLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCopyFromLeft.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCopyFromLeft.Location = new System.Drawing.Point(400, 29);
+            this.btnCopyFromLeft.Location = new System.Drawing.Point(453, 29);
             this.btnCopyFromLeft.Name = "btnCopyFromLeft";
             this.btnCopyFromLeft.Size = new System.Drawing.Size(101, 56);
             this.btnCopyFromLeft.TabIndex = 1;
@@ -182,7 +182,7 @@
             // txtLeftDir
             // 
             this.txtLeftDir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLeftDir.Location = new System.Drawing.Point(15, 29);
+            this.txtLeftDir.Location = new System.Drawing.Point(68, 29);
             this.txtLeftDir.Name = "txtLeftDir";
             this.txtLeftDir.Size = new System.Drawing.Size(379, 25);
             this.txtLeftDir.TabIndex = 0;
@@ -190,7 +190,7 @@
             // btnLeftDir
             // 
             this.btnLeftDir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLeftDir.Location = new System.Drawing.Point(400, 22);
+            this.btnLeftDir.Location = new System.Drawing.Point(453, 22);
             this.btnLeftDir.Name = "btnLeftDir";
             this.btnLeftDir.Size = new System.Drawing.Size(83, 32);
             this.btnLeftDir.TabIndex = 1;
@@ -228,9 +228,9 @@
             this.lvwLeftDir.FullRowSelect = true;
             this.lvwLeftDir.GridLines = true;
             this.lvwLeftDir.HideSelection = false;
-            this.lvwLeftDir.Location = new System.Drawing.Point(8, 18);
+            this.lvwLeftDir.Location = new System.Drawing.Point(11, 6);
             this.lvwLeftDir.Name = "lvwLeftDir";
-            this.lvwLeftDir.Size = new System.Drawing.Size(475, 365);
+            this.lvwLeftDir.Size = new System.Drawing.Size(552, 365);
             this.lvwLeftDir.TabIndex = 0;
             this.lvwLeftDir.UseCompatibleStateImageBehavior = false;
             this.lvwLeftDir.View = System.Windows.Forms.View.Details;
@@ -246,9 +246,9 @@
             this.lvwRightDir.FullRowSelect = true;
             this.lvwRightDir.GridLines = true;
             this.lvwRightDir.HideSelection = false;
-            this.lvwRightDir.Location = new System.Drawing.Point(39, 18);
+            this.lvwRightDir.Location = new System.Drawing.Point(29, 6);
             this.lvwRightDir.Name = "lvwRightDir";
-            this.lvwRightDir.Size = new System.Drawing.Size(475, 365);
+            this.lvwRightDir.Size = new System.Drawing.Size(550, 365);
             this.lvwRightDir.TabIndex = 1;
             this.lvwRightDir.UseCompatibleStateImageBehavior = false;
             this.lvwRightDir.View = System.Windows.Forms.View.Details;
@@ -287,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 569);
+            this.ClientSize = new System.Drawing.Size(1199, 569);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "File Compare v1.0";
